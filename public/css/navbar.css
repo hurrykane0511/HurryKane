@@ -256,17 +256,17 @@ html {
   }
   .img-wrap .img {
     position: absolute;
-    width: 50px !important;
+    width: 100px !important;
   }
   .img-wrap .img1 {
     top: 20% !important;
   }
   .img-wrap .img2 {
-    left: 30%;
+    right: 30%;
   }
   .img-wrap .img3 {
-    bottom: 30% !important;
-    left: 80% !important;
+    bottom: 25% !important;
+    right: 10px !important;
   }
   .nav-footer {
     display: none;
