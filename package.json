@@ -1,7 +1,6 @@
 {
   "name": "hurrykane",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "gsap": "^3.7.1",
@@ -21,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/hurrykane0511/HurryKane/issues"
   },
-  "homepage": "https://github.com/hurrykane0511/HurryKane#readme"
+  "homepage": "https://github.com/hurrykane0511/HurryKane#readme",
+  "description": ""
 }

@@ -1,4 +1,3 @@
-
 const menu_start = gsap.timeline();
 const menu_stop = gsap.timeline();
 const nav_btn = document.querySelector('.btn-nav');
