@@ -30,7 +30,7 @@ function hover() {
         }
     )
     hover_tl.to(menu,{
-        backgroundColor: "#cf9191"
+        backgroundColor: "#948779"
     }, "<")
 }
 function leave() {
