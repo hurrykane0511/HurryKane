@@ -176,6 +176,7 @@ html {
 .menu .right-menu .nav-links .nav-link {
   text-decoration: none;
   font-size: var(--font-size-normal);
+  position: relative;
   color: var(--w-color);
   line-height: 1.2;
   opacity: 0;
@@ -184,6 +185,7 @@ html {
   display: inline-flex;
   -webkit-transition: color .2s;
   transition: color .2s;
+  z-index: 999;
 }
 
 .menu .right-menu .nav-links .nav-link:hover {
@@ -194,11 +196,11 @@ html {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  width: 150px;
+  width: 300px;
 }
 
 .menu .img-wrap .img1 {
-  left: 20%;
+  left: 100px;
   top: 40%;
 }
 
@@ -208,7 +210,7 @@ html {
 
 .menu .img-wrap .img3 {
   bottom: 10%;
-  left: 85%;
+  right: 100px;
 }
 
 .menu .social-address {
@@ -254,7 +256,7 @@ html {
   }
   .img-wrap .img {
     position: absolute;
-    width: 50px;
+    width: 50px !important;
   }
   .img-wrap .img1 {
     top: 20% !important;
