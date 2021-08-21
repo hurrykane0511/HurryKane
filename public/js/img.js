@@ -1,4 +1,3 @@
-
 const navlinks = document.querySelectorAll('.nav-link');
 const menu = document.querySelector('.menu');
 const nav_img = document.querySelectorAll('.img-wrap img');
