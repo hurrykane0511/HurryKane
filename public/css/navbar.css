@@ -13,6 +13,10 @@ html {
   --w-color: #000000;
 }
 
+.filter {
+  display: none;
+}
+
 .container-fluid {
   --padding: 15px;
   --font-size-small: 18px;
@@ -196,7 +200,7 @@ html {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  width: 300px;
+  width: 400px;
 }
 
 .menu .img-wrap .img1 {

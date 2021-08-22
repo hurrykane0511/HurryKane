@@ -1,22 +1,45 @@
-const navlinks = document.querySelectorAll('.nav-link');
-const menu = document.querySelector('.menu');
-const nav_img = document.querySelectorAll('.img-wrap img');
-const hover_tl = gsap.timeline();
-const leave_tl = gsap.timeline();
-let personal = [];
-for (let u = 1; u <= 3; u++) {
-    personal.push('./public/images/img' + u + '.jpg');
-}
+const navlinks = document.querySelectorAll('.nav-link'),
+    menu = document.querySelector('.menu'),
+    psn = document.querySelectorAll('.personal'),
+    pfs = document.querySelectorAll('.professional'),
+    vd = document.querySelectorAll('.Video'),
+    abm = document.querySelectorAll('.About-me'),
+    filter = document.querySelector('svg')
+    
+
+
 navlinks.forEach(link => {
-    link.addEventListener('mouseover', hover);
-    link.addEventListener('mouseleave', leave)
-})
-function hover() {
-    leave_tl.clear();
-    nav_img.forEach((img, i) => {
-        img.src = personal[i];
+    link.addEventListener('mouseover', function () {
+        const current_img = filterLink(link);
+        hover(current_img);
+    });
+    link.addEventListener('mouseleave', function () {
+        const current_img = filterLink(link);
+        leave(current_img);
     })
-    hover_tl.fromTo(nav_img,
+})
+function createFilter() {
+    for (let i = 1; i < 12; i++) {
+
+    }
+}
+function filterLink(el) {
+    if (el.textContent === 'Personal') {
+        return psn;
+    }
+    else if (el.textContent === 'Professional') {
+        return pfs;
+    }
+    else if (el.textContent === 'Video') {
+        return vd;
+    }
+    else {
+        return abm;
+    }
+}
+function hover(el) {
+
+    gsap.fromTo(el,
         {
             y: '100px',
             opacity: 0,
@@ -24,29 +47,34 @@ function hover() {
         {
             y: '0',
             opacity: 1,
+            ease: Power4.easeOut,
             stagger: {
-                amount: .3
+                amount: 0.5
             }
-        }
-    )
-    hover_tl.to(menu,{
-        backgroundColor: "#948779"
-    }, "<")
+        })
+    let t = gsap.to(turbulence, {
+
+        stagger: { amount: .5 },
+        attr: { baseFrequency: '0 0' }
+    })
 }
-function leave() {
-    hover_tl.clear();
-    leave_tl.to(
-        nav_img,
+function leave(el) {
+
+    gsap.to(el,
         {
             y: '100px',
             opacity: 0,
+            ease: Power4.easeOut,
             stagger: {
-                amount: 0.25
+                amount: 0.5
             }
-        }
-    )
-    leave_tl.to( menu,{
-        backgroundColor: "#f2572c"
-    }, "<")
+        })
+    
+    gsap.to(turbulence, {
+        attr: {
+            baseFrequency: '0.02 0.03'
+        },
+        stagger: { amount: 0.5 }
+    })
 }
 

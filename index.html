@@ -12,6 +12,13 @@
 </head>
 
 <body>
+    <svg class="filter">
+        <filter id="noise1" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence baseFrequency="0.02 0.03" result="NOISE" numOctaves="1" class="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20"></feDisplacementMap>
+        </filter>
+
+    </svg>
     <div class="nav-menu">
         <div class="container-fluid">
             <div class="nav-head">
@@ -56,9 +63,18 @@
                         </li>
                     </ul>
                     <div class="img-wrap">
-                        <img src="" alt="error" class="img img1">
-                        <img src="" alt="error" class="img img2">
-                        <img src="" alt="error" class="img img3">
+                        <img src="public/images/img1.jpg" alt="error" class="img img1 personal">
+                        <img src="public/images/img10.jpg" alt="error" class="img img2 personal">
+                        <img src="public/images/img12.jpg" alt="error" class="img img3 personal">
+                        <img src="public/images/img4.jpg" alt="error" class="img img1 professional">
+                        <img src="public/images/img5.jpg" alt="error" class="img img2 professional">
+                        <img src="public/images/img6.jpg" alt="error" class="img img3 professional">
+                        <img src="public/images/img3.jpg" alt="error" class="img img1 Video">
+                        <img src="public/images/img8.jpg" alt="error" class="img img2 Video">
+                        <img src="public/images/img11.jpg" alt="error" class="img img3 Video">
+                        <img src="public/images/img2.jpg" alt="error" class="img img1 About-me">
+                        <img src="public/images/img7.jpg" alt="error" class="img img2 About-me">
+                        <img src="public/images/img9.jpg" alt="error" class="img img3 About-me">
                     </div>
                     <div class="nav-footer">
                         © 2021 All Rights Reserved

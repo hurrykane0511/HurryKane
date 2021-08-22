@@ -49,15 +49,13 @@ function menuActive() {
             y: 0,
             x: '-100%',
             opacity: 0,
-        }
-        ,
+        },
         {
             x: '0',
             opacity: 1,
             stagger: .25,
             ease: Bounce.easeOut,
         }, "<")
-
 }
 function menuStop() {
     menu_stop.to('.nav-link', {
