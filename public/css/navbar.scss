@@ -145,18 +145,24 @@ html {
             opacity: 0;
             pointer-events: none;
             width: 400px;
-            
         }
         .img1 {
-            left: 100px;
-            top: 40%;
+            left: 200px;
+            bottom: 30%;
         }
         .img2 {
-            left: 30%;
+            left: 40%;
+            bottom: 10%;
         }
         .img3 {
             bottom: 10%;
             right: 100px;
+        }
+
+        @for $i from 1 through 12 {
+            .img:nth-child(#{$i}){
+                filter: url(#noise#{$i});
+            }
         }
     }
     .social-address {
@@ -199,7 +205,7 @@ html {
     .img-wrap {
         .img {
             position: absolute;
-            width: 100px !important;
+            width: 200px !important;
         }
         .img1 {
             top: 20% !important;
@@ -209,7 +215,7 @@ html {
         }
         .img3 {
             bottom: 25% !important;
-            right: 10px !important;
+            right: 110px !important;
         }
     }
     .nav-footer{

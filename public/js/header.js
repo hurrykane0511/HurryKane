@@ -10,7 +10,6 @@ str.forEach(e => {
 
 nav_btn.addEventListener('click', function () {
     this.classList.toggle('active');
-
     if (this.classList.contains('active')) {
         menu_stop.clear();
         menuActive();
@@ -26,7 +25,8 @@ function menuActive() {
         {
             y: '0',
             duration: .5,
-            ease: 'Power4.easeIn',
+            ease: 'Power4.easeOut',
+            backgroundColor: ''
         }
     )
     menu_start.fromTo('.nav-link',
