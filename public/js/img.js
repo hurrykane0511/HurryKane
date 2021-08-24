@@ -9,7 +9,7 @@ const navlinks = document.querySelectorAll('.nav-link'),
     filter = document.querySelector('svg'),
     noise = document.querySelector('#noise1');
 
-    let backgroundColor = ['#e2cfad','#837877', '#f3abb7', '#b9aca6']
+let backgroundColor = ['#e2cfad', '#837877', '#f3abb7', '#b9aca6']
 function addFilter() {
     for (let i = 2; i <= 12; i++) {
         let clone = noise.cloneNode(true);
@@ -59,11 +59,12 @@ function hover(el, filter) {
     gsap.fromTo(el,
         {
             y: '100px',
-            opacity: 0,
+           
         },
         {
             x: `${getRandomInt(-100, 100)}px`,
             y: 0,
+            rotate: getRandomInt(-15, 15),
             opacity: 1,
             ease: Power4.easeOut,
             stagger: {
@@ -71,15 +72,15 @@ function hover(el, filter) {
             }
         })
 
-    gsap.to(`.turbulence${filter}` , {
+    gsap.to(`.turbulence${filter}`, {
         stagger: { amount: .5 },
         attr: { baseFrequency: '0 0' }
     })
     gsap.to(`.menu`,
-    {
-        backgroundColor: backgroundColor[filter - 1],
-        duration: 0.5
-    })
+        {
+            backgroundColor: backgroundColor[filter - 1],
+            duration: 0.5
+        })
 }
 function leave(el, filter) {
 
@@ -95,19 +96,19 @@ function leave(el, filter) {
 
     gsap.to(`.turbulence${filter}`, {
         attr: {
-            baseFrequency: '0.02 0.03'
+            baseFrequency: '0.03 0.04'
         },
         stagger: { amount: .6 }
     })
     gsap.to(`.menu`,
-    {
-        backgroundColor: '#f2572c',
-        duration: 0.5
-    })
+        {
+            backgroundColor: '#C9BE62',
+            duration: 0.5
+        })
 }
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-  }
+}

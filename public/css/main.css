@@ -1,5 +1,91 @@
 #main-content {
+  --padding: 15px;
   min-height: calc(100vh - 15px);
-  padding: 0 15px;
+  padding: 0 var(--padding);
+}
+
+.row {
+  height: 100vh;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 6vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.banner .line .right,
+.banner .line .left {
+  overflow: hidden;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: calc(50vw - var(--padding));
+  height: 100%;
+}
+
+.banner .line .left {
+  color: pink;
+  -webkit-transform: skew(0deg, -10deg);
+          transform: skew(0deg, -10deg);
+}
+
+.banner .line .right {
+  color: black;
+  -webkit-transform: skew(0deg, 10deg);
+          transform: skew(0deg, 10deg);
+}
+
+.banner .line .right .content,
+.banner .line .left .content {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 5.5vw;
+}
+
+.banner .line .right .content .text-banner,
+.banner .line .left .content .text-banner {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.banner .line .left .content {
+  left: 100%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.banner .line .right .content {
+  right: 100%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
 }
 /*# sourceMappingURL=main.css.map */

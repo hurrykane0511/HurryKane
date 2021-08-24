@@ -9,8 +9,9 @@
 
 body,
 html {
-  --background-color: #f2572c;
+  --background-color: #C9BE62;
   --w-color: #000000;
+  background: #FFFBD1;
 }
 
 .filter {
@@ -22,7 +23,6 @@ html {
   --font-size-small: 18px;
   --font-size-normal: 58px;
   padding: var(--padding);
-  padding-bottom: 0;
 }
 
 .nav-head {
@@ -35,8 +35,8 @@ html {
           justify-content: space-between;
   width: calc(100% - calc(var(--padding) * 2));
   font-family: "Poppins", sans-serif;
+  z-index: 999;
   pointer-events: none;
-  z-index: 300;
 }
 
 .nav-head .logo {
@@ -45,6 +45,7 @@ html {
   font-weight: 900;
   letter-spacing: 2px;
   pointer-events: visible;
+  mix-blend-mode: difference;
 }
 
 .nav-head .btn-nav {
@@ -109,21 +110,21 @@ html {
   display: -ms-flexbox;
   display: flex;
   font-family: "Poppins", sans-serif;
-  padding-top: var(--padding);
-  height: 100%;
-  width: 100vw;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
   position: fixed;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   background: var(--background-color);
   overflow: hidden;
+  padding: var(--padding);
+  z-index: 99;
 }
 
 .menu .left-menu {
   width: 50%;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,7 +135,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: calc(100% - var(--padding));
+  height: 100%;
 }
 
 .menu .left-menu .social-address {
@@ -142,18 +143,20 @@ html {
 }
 
 .menu .left-menu .myname {
+  height: 100%;
   font-size: 20vw;
-  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: 'Yusei Magic', sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  line-height: .9;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'Yusei Magic', sans-serif;
+  padding-bottom: -15px;
 }
 
 .menu .right-menu {
@@ -165,7 +168,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
-  height: calc(100% - var(--padding));
+  height: 100%;
 }
 
 .menu .right-menu .social-address {
@@ -187,6 +190,7 @@ html {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  font-weight: bold;
   -webkit-transition: color .2s;
   transition: color .2s;
   z-index: 999;
@@ -292,7 +296,6 @@ html {
 .menu .nav-footer {
   margin-left: auto;
   margin-top: auto;
-  margin-right: var(--padding);
   font-size: var(--font-size-small);
 }
 

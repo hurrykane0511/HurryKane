@@ -1,4 +1,55 @@
-#main-content{
+#main-content {
+    --padding: 15px;
     min-height: calc(100vh - 15px);
-    padding: 0 15px;
+    padding: 0 var(--padding);
+}
+.row {
+    height: 100vh;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6vw;
+        user-select: none;
+        pointer-events: none;
+        .right,
+        .left {
+            overflow: hidden;
+            position: relative;
+            height: fit-content;
+            width: calc(50vw - var(--padding));
+            height: 100%;
+        }
+        .left {
+            color: pink;
+            transform: skew(0deg, -10deg);
+        }
+        .right {
+            color: black;
+            transform: skew(0deg, 10deg);
+        }
+        .right .content,
+        .left .content {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 5.5vw;
+            .text-banner{
+                display: inline-block;
+                transition: transform 0.5s ease-out;
+            }
+        }
+        .left .content {
+            left: 100%;
+            transform: translate(-50%);
+        }
+        .right .content {
+            right: 100%;
+            transform: translate(50%);
+        }
+    }
 }

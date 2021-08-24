@@ -4,6 +4,7 @@ const nav_btn = document.querySelector('.btn-nav');
 const myname = document.querySelector('.myname');
 let str = myname.textContent.split('');
 myname.innerHTML = '';
+
 str.forEach(e => {
     myname.innerHTML += '<span>' + e + '</span>';
 });
@@ -12,10 +13,12 @@ nav_btn.addEventListener('click', function () {
     this.classList.toggle('active');
     if (this.classList.contains('active')) {
         menu_stop.clear();
+        document.querySelector('.logo').style.color = '#000';
         menuActive();
     }
     else {
         menu_start.clear();
+        document.querySelector('.logo').removeAttribute('style');
         menuStop();
     }
 })
@@ -24,9 +27,8 @@ function menuActive() {
     menu_start.to('.menu',
         {
             y: '0',
-            duration: .5,
-            ease: 'Power4.easeOut',
-            backgroundColor: ''
+            duration: 1,
+            ease: Power4.easeIn,
         }
     )
     menu_start.fromTo('.nav-link',
