@@ -1,3 +1,5 @@
+import gsap from "./library/gsap";
+
 const menu_start = gsap.timeline();
 const menu_stop = gsap.timeline();
 const nav_btn = document.querySelector('.btn-nav');
@@ -28,7 +30,7 @@ function menuActive() {
         {
             y: '0',
             duration: 1,
-            ease: Power4.easeIn,
+            ease: 'Power04.easeIn',
         }
     )
     menu_start.fromTo('.nav-link',
@@ -56,7 +58,7 @@ function menuActive() {
             x: '0',
             opacity: 1,
             stagger: .25,
-            ease: Bounce.easeOut,
+            ease: 'Bounce.easeOut',
         }, "<")
 }
 function menuStop() {

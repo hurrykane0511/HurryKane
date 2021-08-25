@@ -2,6 +2,7 @@
     --padding: 15px;
     min-height: calc(100vh - 15px);
     padding: 0 var(--padding);
+    overflow: hidden;
 }
 .row {
     height: 100vh;
@@ -9,6 +10,7 @@
 .banner {
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
     .line {
         display: flex;
@@ -24,6 +26,7 @@
             height: fit-content;
             width: calc(50vw - var(--padding));
             height: 100%;
+            z-index: 9;
         }
         .left {
             color: pink;
@@ -38,7 +41,7 @@
             position: absolute;
             white-space: nowrap;
             font-size: 5.5vw;
-            .text-banner{
+            .text-banner {
                 display: inline-block;
                 transition: transform 0.5s ease-out;
             }
@@ -51,5 +54,20 @@
             right: 100%;
             transform: translate(50%);
         }
+    }
+    canvas { 
+        display: block; 
+        position: fixed;
+        z-index:  5; // put it to background
+        left: 0; // position it to fill the whole screen
+        top: 0; // position it to fill the whole screen
+    }
+    .banner-img {
+        width: 500px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 8;
     }
 }

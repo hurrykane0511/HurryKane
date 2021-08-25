@@ -1,6 +1,5 @@
 const banner_text = document.querySelectorAll('.text-banner');
 const banner = document.querySelector('.banner');
-
 let width = window.innerWidth;
 
 const bannerMove = function (e) {
@@ -11,4 +10,4 @@ const bannerMove = function (e) {
 }
 
 banner.addEventListener('mousemove', bannerMove);
-window.addEventListener('resize', () => width = this.innerWidth);
+window.addEventListener('resize', () => width = window.innerWidth);

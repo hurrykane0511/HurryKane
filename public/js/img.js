@@ -1,5 +1,4 @@
-
-
+import gsap from "gsap";
 const navlinks = document.querySelectorAll('.nav-link'),
     menu = document.querySelector('.menu'),
     psn = document.querySelectorAll('.personal'),
@@ -66,7 +65,7 @@ function hover(el, filter) {
             y: 0,
             rotate: getRandomInt(-15, 15),
             opacity: 1,
-            ease: Power4.easeOut,
+            ease: 'Power4.easeOut',
             stagger: {
                 amount: .5
             }
@@ -88,7 +87,7 @@ function leave(el, filter) {
         {
             y: '100px',
             opacity: 0,
-            ease: Power4.easeIn,
+            ease: 'Power4.easeIn',
             stagger: {
                 amount: 0.5
             }

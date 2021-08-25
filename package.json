@@ -1,10 +1,11 @@
 {
   "name": "hurrykane",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "gsap": "^3.7.1",
-    "semver": "^7.3.5"
+    "three": "^0.131.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,6 +21,5 @@
   "bugs": {
     "url": "https://github.com/hurrykane0511/HurryKane/issues"
   },
-  "homepage": "https://github.com/hurrykane0511/HurryKane#readme",
-  "description": ""
+  "homepage": "https://github.com/hurrykane0511/HurryKane#readme"
 }
