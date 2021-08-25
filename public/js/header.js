@@ -1,4 +1,4 @@
-import gsap from "./library/gsap";
+import gsap from "gsap";
 
 const menu_start = gsap.timeline();
 const menu_stop = gsap.timeline();
