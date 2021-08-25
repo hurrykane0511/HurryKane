@@ -30,7 +30,7 @@ function menuActive() {
         {
             y: '0',
             duration: 1,
-            ease: 'Power04.easeIn',
+            ease: 'Power4.easeIn',
         }
     )
     menu_start.fromTo('.nav-link',

@@ -5718,7 +5718,7 @@ function menuActive() {
   menu_start.to('.menu', {
     y: '0',
     duration: 1,
-    ease: 'Power04.easeIn'
+    ease: 'Power4.easeIn'
   });
   menu_start.fromTo('.nav-link', {
     x: '-100px',
@@ -5793,7 +5793,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49396" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
