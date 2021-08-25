@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import { gsap } from "gsap";
 const navlinks = document.querySelectorAll('.nav-link'),
     menu = document.querySelector('.menu'),
     psn = document.querySelectorAll('.personal'),
@@ -58,7 +58,7 @@ function hover(el, filter) {
     gsap.fromTo(el,
         {
             y: '100px',
-           
+
         },
         {
             x: `${getRandomInt(-100, 100)}px`,

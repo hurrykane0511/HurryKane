@@ -5685,9 +5685,7 @@ exports.default = exports.gsap = gsapWithCSS;
 },{"./gsap-core.js":"node_modules/gsap/gsap-core.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js"}],"public/js/img.js":[function(require,module,exports) {
 "use strict";
 
-var _gsap = _interopRequireDefault(require("gsap"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _gsap = require("gsap");
 
 var navlinks = document.querySelectorAll('.nav-link'),
     menu = document.querySelector('.menu'),
@@ -5742,7 +5740,7 @@ function filterLink(el) {
 }
 
 function hover(el, filter) {
-  _gsap.default.fromTo(el, {
+  _gsap.gsap.fromTo(el, {
     y: '100px'
   }, {
     x: "".concat(getRandomInt(-100, 100), "px"),
@@ -5755,7 +5753,7 @@ function hover(el, filter) {
     }
   });
 
-  _gsap.default.to(".turbulence".concat(filter), {
+  _gsap.gsap.to(".turbulence".concat(filter), {
     stagger: {
       amount: .5
     },
@@ -5764,14 +5762,14 @@ function hover(el, filter) {
     }
   });
 
-  _gsap.default.to(".menu", {
+  _gsap.gsap.to(".menu", {
     backgroundColor: backgroundColor[filter - 1],
     duration: 0.5
   });
 }
 
 function leave(el, filter) {
-  _gsap.default.to(el, {
+  _gsap.gsap.to(el, {
     y: '100px',
     opacity: 0,
     ease: 'Power4.easeIn',
@@ -5780,7 +5778,7 @@ function leave(el, filter) {
     }
   });
 
-  _gsap.default.to(".turbulence".concat(filter), {
+  _gsap.gsap.to(".turbulence".concat(filter), {
     attr: {
       baseFrequency: '0.03 0.04'
     },
@@ -5789,7 +5787,7 @@ function leave(el, filter) {
     }
   });
 
-  _gsap.default.to(".menu", {
+  _gsap.gsap.to(".menu", {
     backgroundColor: '#C9BE62',
     duration: 0.5
   });

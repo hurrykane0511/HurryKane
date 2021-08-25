@@ -5685,13 +5685,11 @@ exports.default = exports.gsap = gsapWithCSS;
 },{"./gsap-core.js":"node_modules/gsap/gsap-core.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js"}],"public/js/header.js":[function(require,module,exports) {
 "use strict";
 
-var _gsap = _interopRequireDefault(require("gsap"));
+var _gsap = require("gsap");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var menu_start = _gsap.gsap.timeline();
 
-var menu_start = _gsap.default.timeline();
-
-var menu_stop = _gsap.default.timeline();
+var menu_stop = _gsap.gsap.timeline();
 
 var nav_btn = document.querySelector('.btn-nav');
 var myname = document.querySelector('.myname');
