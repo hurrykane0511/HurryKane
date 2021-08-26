@@ -1,4 +1,4 @@
-import gsap from "gsap";
+
 
 const navlinks = document.querySelectorAll('.nav-link'),
     psn = document.querySelectorAll('.personal'),
