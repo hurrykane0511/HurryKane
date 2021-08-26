@@ -1,6 +1,6 @@
-import { gsap } from "gsap";
+import gsap from "gsap";
+
 const navlinks = document.querySelectorAll('.nav-link'),
-    menu = document.querySelector('.menu'),
     psn = document.querySelectorAll('.personal'),
     pfs = document.querySelectorAll('.professional'),
     vd = document.querySelectorAll('.Video'),

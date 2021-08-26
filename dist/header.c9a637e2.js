@@ -5685,11 +5685,13 @@ exports.default = exports.gsap = gsapWithCSS;
 },{"./gsap-core.js":"node_modules/gsap/gsap-core.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js"}],"public/js/header.js":[function(require,module,exports) {
 "use strict";
 
-var _gsap = require("gsap");
+var _gsap = _interopRequireDefault(require("gsap"));
 
-var menu_start = _gsap.gsap.timeline();
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var menu_stop = _gsap.gsap.timeline();
+var menu_start = _gsap.default.timeline();
+
+var menu_stop = _gsap.default.timeline();
 
 var nav_btn = document.querySelector('.btn-nav');
 var myname = document.querySelector('.myname');
@@ -5791,7 +5793,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62311" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
